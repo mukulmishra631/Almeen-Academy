@@ -1,0 +1,419 @@
+/* ===== Global Variables ===== */
+:root {
+  --primary-color: #800000;
+  --secondary-color: #FFFFF0;
+  --accent-color: #4169E1;
+  --text-color: #2C2C2A;
+  --bg-light: #ffffff;
+  --bg-dark: #1A1A1A;
+}
+
+/* ===== Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background: var(--primary-color);
+  color: white;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  margin-right: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: yellow;
+  border-bottom: 2px solid yellow;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* ===== Responsive Nav (Mobile) ===== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 18px;
+    z-index: 1000;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--primary-color);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+/* ===== Hero Section ===== */
+/* ===== Hero Section ===== */
+.hero {
+  background: url('../Images_almeen/campus_hd.jfif') no-repeat center center/cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay for readability */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 40px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 0.2s;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  animation: fadeInUp 1s ease-out;
+  animation-delay: 0.4s;
+}
+
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+/* ===== About Us Section ===== */
+.about-us {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: var(--secondary-color);
+}
+
+.about-us h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  animation: fadeInUp 1s ease-out;
+}
+
+.about-us p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+/* ===== Our Story Section ===== */
+.story {
+  background-color: var(--bg-light);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.story h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  animation: fadeInUp 1s ease-out;
+}
+
+.story p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: auto;
+  animation: fadeInUp 1s ease-out 0.2s;
+}
+
+/* ===== Mission & Vision Section ===== */
+.mission {
+  background-color: var(--bg-light);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.mission h2 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.mission-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.mission-content > div {
+  flex: 1 1 300px;
+  background-color: var(--bg-light);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-content > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.mission-content h3 {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.mission-content p {
+  font-size: 1rem;
+}
+
+/* ===== Our Values Section ===== */
+.values {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.values h2 {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.value-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.value-card {
+  flex: 1 1 250px;
+  background-color: var(--bg-light);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.value-card h3 {
+  color: var(--accent-color);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===== Meet the Team Section ===== */
+.team {
+  background-color: var(--bg-light);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  animation: fadeInUp 1s ease-out;
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.team-member {
+  flex: 1 1 250px;
+  text-align: center;
+  animation: fadeInUp 1s ease-out 0.6s;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+  transform: scale(1.1);
+}
+
+.team-member p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* ===== Testimonials Section ===== */
+.testimonials {
+  background-color: var(--bg-light);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  animation: fadeInUp 1s ease-out;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.testimonial-card {
+  flex: 1 1 300px;
+  background-color: var(--bg-light);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.testimonial-card p:nth-child(2) {
+  text-align: right;
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* ===== Contact Section ===== */
+.contact {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

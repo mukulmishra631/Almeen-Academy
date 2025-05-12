@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="css/gallery.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="logo">
+          <img src="Images_almeen/logoalmeen.jfif" alt="Logo" width="40" />
+          Almeen Academy
+        </div>
+
+        <nav>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <button
+          class="hamburger"
+          onclick="toggleMenu()"
+          aria-label="Toggle navigation menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+    <!--Gallery section-->
+    <main class="gallery">
+      <h1>School Events Gallery</h1>
+
+      <div class="gallery-container">
+        <!-- Photo Gallery -->
+        <section class="gallery-photos">
+          <h2>Photo Gallery</h2>
+          <div class="grid">
+            <div class="grid-item">
+              <img src="path-to-image1.jpg" alt="Event 1" />
+            </div>
+            <div class="grid-item">
+              <img src="path-to-image2.jpg" alt="Event 2" />
+            </div>
+            <div class="grid-item">
+              <img src="path-to-image3.jpg" alt="Event 3" />
+            </div>
+            <div class="grid-item">
+              <img src="path-to-image4.jpg" alt="Event 4" />
+            </div>
+            <!-- Add more images as required -->
+          </div>
+        </section>
+
+        <!-- Video Gallery -->
+        <section class="gallery-videos">
+          <h2>Video Gallery</h2>
+          <div class="video-grid">
+            <div class="video-item">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/your-video-id"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="video-item">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/another-video-id"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <!-- Add more videos as required -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+       <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-col">
+          <img src="Images_almeen/logoalmeen.jfif" alt="Logo" width="60" />
+          <p>Almeen Academy</p>
+          <p>Nurturing Minds, Shaping Futures</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>📞 +92 300 1234567</p>
+          <p>📧 info@almeenacademy.edu</p>
+          <p>📍 123 Main Street, Gorakhpur Uttarpradesh</p>
+        </div>
+        <div class="footer-col">
+          <h4>Social Media</h4>
+          <p><a href="#">Facebook</a></p>
+          <p><a href="#">Instagram</a></p>
+          <p><a href="#">YouTube</a></p>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2025 Almeen Academy. All rights reserved.</p>
+    </footer>
+    </footer>
+    <script src="js/commons.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
