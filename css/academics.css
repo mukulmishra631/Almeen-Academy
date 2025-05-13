@@ -1,11 +1,11 @@
 /* ===== Global Variables ===== */
 :root {
-  --primary-color: #800000;
-  --secondary-color: #FFFFF0;
-  --accent-color: #4169E1;
-  --text-color: #2C2C2A;
+  --primary-color: #ff0000;
+  --secondary-color: #fffff0;
+  --accent-color: #4169e1;
+  --text-color: #2c2c2a;
   --bg-light: #ffffff;
-  --bg-dark: #1A1A1A;
+  --bg-dark: #1a1a1a;
 }
 
 /* ===== Base Styles ===== */
@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background-color: var(--bg-light);
   color: var(--text-color);
   line-height: 1.6;
@@ -125,7 +125,6 @@ h1 {
   display: block;
   animation: slideIn 1s ease-out;
   text-align: center;
-
 }
 
 h1:hover {
@@ -139,7 +138,7 @@ section {
 
 /* Center Align Sections (Academics, Programs Offered, Departments) */
 section h2 {
-  text-align: center;  /* Center the heading */
+  text-align: center; /* Center the heading */
   font-size: 2rem;
   color: var(--primary-color);
   margin-bottom: 20px;
@@ -150,14 +149,13 @@ section ul {
   list-style-type: disc;
   padding-left: 40px;
   animation: fadeInUp 1s ease-out;
-  text-align: flex;  /* Center align the list */
+  text-align: flex; /* Center align the list */
 }
 
 section ul li {
   font-size: 1.1rem;
   margin-bottom: 10px;
 }
-
 
 /* ===== Footer ===== */
 footer {
@@ -193,5 +191,3 @@ footer p {
     transform: translateX(0);
   }
 }
-
-

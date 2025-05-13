@@ -1,12 +1,12 @@
 /* ===== Global Variables ===== */
 :root {
-  --primary-color: #800000;
+  --primary-color: #ff0000;
   /* --primary-color:rgb(85, 194, 241); */
-  --secondary-color: #FFFFF0;
-  --accent-color: #4169E1;
-  --text-color: #2C2C2A;
+  --secondary-color: #fffff0;
+  --accent-color: #4169e1;
+  --text-color: #2c2c2a;
   --bg-light: #ffffff;
-  --bg-dark: #1A1A1A;
+  --bg-dark: #1a1a1a;
 }
 
 /* ===== Base Styles ===== */
@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background-color: var(--bg-light);
   color: var(--text-color);
   line-height: 1.6;
@@ -115,7 +115,8 @@ body {
 
 /* ===== Hero Section ===== */
 .hero {
-  background: url('../Images_almeen/campus_hd.jfif') no-repeat center center/cover;
+  background: url("../Images_almeen/campus_hd.jfif") no-repeat center
+    center/cover;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -128,7 +129,10 @@ body {
 .hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.5); /* Black overlay for readability */
   z-index: 1;
 }
@@ -277,8 +281,6 @@ body {
   }
 }
 
-
-
 /* ===== Footer ===== */
 .footer {
   background: var(--primary-color);
@@ -339,7 +341,7 @@ body {
 .dark-mode .card {
   background: #333;
   color: #f5f5f5;
-  border-left-color: #4169E1;
+  border-left-color: #4169e1;
 }
 
 /* ===== Principal's Message Section ===== */
