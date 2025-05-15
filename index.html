@@ -74,23 +74,54 @@
       </div>
     </section>
 
-    <!-- Principal's Message with Photo -->
-    <section class="principal-container">
-      <div class="container">
-        <div class="principal-photo animate-left">
-          <img src="Images_almeen/ganesh_sir.jfif" alt="Principal" />
-        </div>
-        <div class="principal-message animate-right">
-          <h2>Principal's Message</h2>
-          <p>
-            At Almeen Academy, we are committed to providing a safe, nurturing,
-            and intellectually stimulating environment where every student is
-            empowered to reach their full potential...
-          </p>
-        </div>
-      </div>
-    </section>
+<div class="all-principals-wrapper">
+  <!-- Card 1 -->
+  <div class="principal-card">
+    <div class="principal-photo">
+      <img src="Images_almeen/ganesh_sir.jfif" alt="Principal">
+    </div>
+    <div class="principal-message">
+      <h3>Principal's Message</h3>
+      <p>Welcome to ALMEEN ACADEMY... <span>[...]</span></p>
+      <button class="read-more-btn" onclick="openModal(1)">Read More</button>
+    </div>
+  </div>
 
+  <!-- Card 2 -->
+  <div class="principal-card">
+    <div class="principal-photo">
+      <img src="Images_almeen/ganesh_sir.jfif" alt="Principal">
+    </div>
+    <div class="principal-message">
+      <h3>Principal's Message</h3>
+      <p>Welcome to ALMEEN ACADEMY... <span>[...]</span></p>
+      <button class="read-more-btn" onclick="openModal(2)">Read More</button>
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="principal-card">
+    <div class="principal-photo">
+      <img src="Images_almeen/ganesh_sir.jfif" alt="Principal">
+    </div>
+    <div class="principal-message">
+      <h3>Principal's Message</h3>
+      <p>Welcome to ALMEEN ACADEMY... <span>[...]</span></p>
+      <button class="read-more-btn" onclick="openModal(3)">Read More</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal" onclick="closeOutside(event)">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Principal's Message</h2>
+    <p id="modalText">
+      <!-- Full message will appear here -->
+    </p>
+  </div>
+</div>
     <!-- News Section -->
     <section class="section light-bg">
       <div class="container">
@@ -132,18 +163,19 @@
           <img src="Images_almeen/logoalmeen.jfif" alt="Logo" width="60" />
           <p>Almeen Academy</p>
           <p>Nurturing Minds, Shaping Futures</p>
+          <p>Affiliation Number : 2133245 (Affiliated to CBSE Board, New Delhi)</p>
         </div>
         <div class="footer-col">
           <h4>Contact Us</h4>
-          <p>📞 +92 300 1234567</p>
+          <p>📞 +91 9696444474</p>
           <p>📧 info@almeenacademy.edu</p>
-          <p>📍 123 Main Street, Gorakhpur Uttarpradesh</p>
+          <p>📍 Pokharbhinda, Bhathat Bailo Road, Gorakhpur</p>
         </div>
         <div class="footer-col">
           <h4>Social Media</h4>
-          <p><a href="#">Facebook</a></p>
-          <p><a href="#">Instagram</a></p>
-          <p><a href="#">YouTube</a></p>
+          <p><a href="https://www.facebook.com/share/18uWfA1YBm/?mibextid=qi20mg" target="_blank">Facebook</a></p>
+          <p><a href="https://www.instagram.com/almeenacademy?utm_source=qr&igsh=MWhhMjJpd3Zmd2dg==" target="_blank">Instagram</a></p>
+          <p><a href="https://www.youtube.com/@GaneshPandeyRaj" target="_blank">YouTube</a></p>
         </div>
       </div>
       <p class="copyright">&copy; 2025 Almeen Academy. All rights reserved.</p>
@@ -154,5 +186,7 @@
 <script src="js/darkmode.js"></script> -->
     <script src="js/commons.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+
   </body>
 </html>
