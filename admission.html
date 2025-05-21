@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admission Form - ALMEEN ACADEMY</title>
+    <link rel="stylesheet" href="css/admission.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- Web Manifest -->
+    <link rel="manifest" href="Images_almeen/site.webmanifest" />
+
+    <meta name="theme-color" content="#FF0000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <div class="logo">
+          <img src="Images_almeen/logoalmeen.jfif" alt="Logo" width="40" />
+          Almeen Academy
+        </div>
+
+        <nav>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admission.html">Admission</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <button
+          class="hamburger"
+          onclick="toggleMenu()"
+          aria-label="Toggle navigation menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <section class="form-section">
+      <h2>Admission Form</h2>
+      <p>Please fill in the details below to apply for admission.</p>
+
+      <!-- Success/Error Message -->
+      <div id="formMessage" class="message-box"></div>
+
+      <!-- Admission Form -->
+      <form
+        id="admissionForm"
+        action="https://formspree.io/f/your-form-id "
+        method="POST"
+      >
+        <!-- Student Details -->
+        <h3>Student Information</h3>
+        <div class="form-group">
+          <label for="studentName">Full Name of Student *</label>
+          <input type="text" id="studentName" name="studentName" required />
+          <small class="error" id="nameError"
+            >Please enter student's full name</small
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth *</label>
+          <input type="date" id="dob" name="dob" required />
+          <small class="error" id="dobError">Please select a valid date</small>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender *</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+          <small class="error" id="genderError">Please select gender</small>
+        </div>
+
+        <div class="form-group">
+          <label for="grade">Grade Applying For *</label>
+          <select id="grade" name="grade" required>
+            <option value="">Select Grade</option>
+            <option value="nursery">Nursery</option>
+            <option value="kg">KG</option>
+            <option value="1">Class 1</option>
+            <option value="5">Class 5</option>
+            <option value="9">Class 9</option>
+            <option value="11">Class 11</option>
+          </select>
+          <small class="error" id="gradeError">Please select grade</small>
+        </div>
+
+        <!-- Parent Details -->
+        <h3>Parent / Guardian Information</h3>
+
+        <div class="form-group">
+          <label for="parentName">Parent / Guardian Name *</label>
+          <input type="text" id="parentName" name="parentName" required />
+          <small class="error" id="parentNameError"
+            >Please enter parent/guardian name</small
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="parentPhone">Mobile Number *</label>
+          <input
+            type="tel"
+            id="parentPhone"
+            name="parentPhone"
+            maxlength="10"
+            required
+          />
+          <small class="error" id="phoneError"
+            >Please enter a valid 10-digit mobile number</small
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="parentEmail">Email Address</label>
+          <input type="email" id="parentEmail" name="parentEmail" />
+          <small class="error" id="emailError"
+            >Please enter a valid email address</small
+          >
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Submit Application</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 ALMEEN ACADEMY. All rights reserved.</p>
+    </footer>
+
+    <!-- JS Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

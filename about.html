@@ -45,6 +45,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="academics.html">Academics</a></li>
+            <li><a href="admission.html">Admission</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
@@ -78,25 +79,29 @@
         one of the most respected schools in the region.
       </p>
     </section>
-
+    <!--Mission section-->
     <section class="mission">
       <h2 class="animate__fadeIn">Our Mission & Vision</h2>
       <div class="mission-content">
         <div class="vision animate__fadeIn animate__delay-2s">
           <h3>Our Vision</h3>
           <p>
-            To be the most preferred school in our area which provides quality. Education, nurtures talent and builds up competent, responsible and well turned out human beings who will be ready to face the challenges of life.
+            To be the most preferred school in our area which provides quality.
+            Education, nurtures talent and builds up competent, responsible and
+            well turned out human beings who will be ready to face the
+            challenges of life.
           </p>
         </div>
         <div class="mission-statement animate__fadeIn animate__delay-2s">
           <h3>Our Mission</h3>
           <p>
-            Almeen Academy promote child centered Education Leading to all round development of the students.
+            Almeen Academy promote child centered Education Leading to all round
+            development of the students.
           </p>
         </div>
       </div>
     </section>
-
+    <!--values section-->
     <section class="values">
       <h2 class="animate__fadeIn">Our Values</h2>
       <div class="value-cards">
@@ -118,7 +123,96 @@
         </div>
       </div>
     </section>
+<!-- Rules & Regulations Section -->
+<section>
+  <h2>School Policies</h2>
+  <p>We follow a structured set of rules to maintain discipline and a healthy learning environment.</p>
 
+  <button id="rulesReadMoreBtn" class="btn-rules">Read School Policies</button>
+</section>
+
+<!-- Modal with Tabs -->
+<div id="schoolRulesModal" class="modal-rules">
+  <div class="modal-rules-content">
+    <span id="closeRulesModalBtn" class="close-rules-btn">&times;</span>
+    <h2>Rules & Regulations</h2>
+
+    <!-- Tabs Navigation -->
+    <div class="tab-nav">
+      <button class="tablink " onclick="openTab(event, 'uniform')">Uniform</button>
+      <button class="tablink" onclick="openTab(event, 'timing')">Timings</button>
+      <button class="tablink" onclick="openTab(event, 'attendance')">Attendance</button>
+      <button class="tablink" onclick="openTab(event, 'discipline')">Discipline</button>
+    </div>
+
+<!-- Tabs Contents -->
+<div id="uniform" class="tabcontent">
+  <h3>School Uniform</h3>
+  
+  <h4>Summer Uniform (Mon, Tue, Thu, Fri)</h4>
+  <ul>
+    <li><strong>Boys:</strong> Light grey lining shirt with monogram, dark grey pants, black shoes, white socks, school tie & belt.</li>
+    <li><strong>Girls:</strong> Same shirt, dark grey tunic with monogram, black shoes, white socks, tie & belt, hair in 2 ponies with black ribbon.</li>
+  </ul>
+
+  <h4>Salwar Kameez Option (Girls)</h4>
+  <ul>
+    <li>Dark grey Koti with monogram</li>
+    <li>Light grey lining Kameez</li>
+    <li>Dark grey Salwar</li>
+  </ul>
+
+  <h4>House Uniform (Wed, Sat)</h4>
+  <ul>
+    <li><strong>Boys:</strong> House T-shirt, Lower, white shoes & socks.</li>
+    <li><strong>Girls:</strong> House T-shirt, Lower or white Salwar Suit with House Koti, white socks.</li>
+  </ul>
+
+  <h4>Winter Uniform</h4>
+  <ul>
+    <li>Dark grey sweater with monogram</li>
+    <li>Dark grey woollen cap</li>
+    <li>Navy blue blazer with monogram</li>
+  </ul>
+</div>
+
+
+<div id="timing" class="tabcontent">
+  <h3>School Timings</h3>
+  <ul>
+    <li>School starts at 7:30 AM sharp.</li>
+    <li>Classes end at 12:30 PM on all working days.</li>
+  </ul>
+</div>
+
+<div id="attendance" class="tabcontent">
+  <h3>Attendance Policy</h3>
+  <ul>
+    <li>Minimum attendance required is 75%.</li>
+    <li>Absence without prior notice may lead to disciplinary action.</li>
+    <li>Medical leaves require proper documentation.</li>
+  </ul>
+</div>
+
+<div id="discipline" class="tabcontent">
+  <h3>Discipline Rules</h3>
+  <ul>
+    <li>Student are to aintain a high standard of good manners and general behavior.</li>
+    <li>Students should speak only English in the School Premises.</li>
+    <li>Student must be punctual and attend the class in neat, tidy proper school uniform.</li>
+    <li>Articles found in school premises or in the class room must be handed over to office of the school.</li>
+    <li>In disciplined Act will be liable for disciplinary action up to struck of the name from school permanently.</li>
+    <li>Student should not write cover or scratch on school wall or defect the school furniture.</li>
+    <li>All the students must abide by the rule & regulation of the school.</li>
+    <li>Presence of students on 15th August and 26th January is compulsory and students must come in uniform on this national festival.</li>
+    <li>Use of mobile phones inside campus is strictly prohibited.</li>
+    <li>Students must respect teachers and fellow classmates.</li>
+  </ul>
+</div>
+
+  </div>
+</div>
+    <!--Meet the team section-->
     <section class="team">
       <h2 class="animate__fadeIn">Meet the Team</h2>
       <div class="team-members">
@@ -139,7 +233,7 @@
         </div>
       </div>
     </section>
-
+    <!--testimonials section-->
     <section class="testimonials">
       <h2 class="animate__fadeIn">What Our Students & Parents Say</h2>
       <div class="testimonial-cards">
@@ -159,14 +253,32 @@
         </div>
       </div>
     </section>
-
-    <footer>
-      <section class="contact">
-        <h2 class="animate__fadeIn">Contact Us</h2>
-        <p>For inquiries, please contact us at:</p>
-        <p>Email: [Email Address]</p>
-        <p>Phone: [Phone Number]</p>
-      </section>
+    <!--footer-->
+    <!-- Footer -->
+      <footer class="footer">
+        <div class="container footer-content">
+          <div class="footer-col">
+            <img src="Images_almeen/logoalmeen.jfif" alt="Logo" width="60" />
+            <p>Almeen Academy</p>
+            <p>Nurturing Minds, Shaping Futures</p>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <p>📞 +92 300 1234567</p>
+            <p>📧 info@almeenacademy.edu</p>
+            <p>📍 123 Main Street, Gorakhpur Uttarpradesh</p>
+          </div>
+          <div class="footer-col">
+            <h4>Social Media</h4>
+            <p><a href="https://www.facebook.com/share/18uWfA1YBm/?mibextid=qi20mg" target="_blank">Facebook</a></p>
+          <p><a href="https://www.instagram.com/almeenacademy?utm_source=qr&igsh=MWhhMjJpd3Zmd2dg==" target="_blank">Instagram</a></p>
+          <p><a href="https://www.youtube.com/@GaneshPandeyRaj" target="_blank">YouTube</a></p>
+          </div>
+        </div>
+        <p class="copyright">
+          &copy; 2025 Almeen Academy. All rights reserved.
+        </p>
+      </footer>
     </footer>
     <!-- Darkmode button
     <button id="darkModeToggle">🌙</button>
@@ -175,5 +287,6 @@
     <!-- External JavaScript for Animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
     <script src="js/commons.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
