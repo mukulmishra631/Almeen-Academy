@@ -4,296 +4,370 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - ALMEEN ACADEMY</title>
-    <link rel="stylesheet" href="css/about.css" />
-    <!-- Favicon (Browser tab icon) -->
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="Images_almeen/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="Images_almeen/favicon-16x16.png"
-    />
-
-    <!-- Apple Touch Icon (iOS Home screen icon) -->
+    <meta name="description" content="Learn about ALMEEN ACADEMY's history, mission, values, and the dedicated team behind our success in providing quality education." />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Images_almeen/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="Images_almeen/favicon-16x16.png" />
     <link rel="apple-touch-icon" href="Images_almeen/apple-touch-icon.png" />
-
-    <!-- Web Manifest -->
     <link rel="manifest" href="Images_almeen/site.webmanifest" />
-
     <meta name="theme-color" content="#FF0000" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent"
-    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Preload critical assets -->
+    <link rel="preload" href="Images_almeen/about-hero.jpg" as="image" />
+    <link rel="preload" href="Images_almeen/logoalmeen.jfif" as="image" />
   </head>
   <body>
-    <header class="navbar">
+    <!-- Header -->
+    <header class="navbar" role="banner">
       <div class="container">
         <div class="logo">
-          <img src="Images_almeen/logoalmeen.jfif" alt="Logo" width="40" />
-          Almeen Academy
+          <img src="Images_almeen/logoalmeen.jfif" alt="Almeen Academy Logo" width="40" height="40" loading="eager" />
+          <span>Almeen Academy</span>
         </div>
 
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
           <ul class="nav-links" id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="academics.html">Academics</a></li>
-            <li><a href="admission.html">Admission</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="index.html" aria-current="false">Home</a></li>
+            <li><a href="about.html" aria-current="page">About Us</a></li>
+            <li><a href="academics.html" aria-current="false">Academics</a></li>
+            <li><a href="admission.html" aria-current="false">Admission</a></li>
+            <li><a href="gallery.html" aria-current="false">Gallery</a></li>
+            <li><a href="contact.html" aria-current="false">Contact Us</a></li>
           </ul>
         </nav>
 
-        <button
-          class="hamburger"
-          onclick="toggleMenu()"
-          aria-label="Toggle navigation menu"
-        >
-          ☰
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
         </button>
       </div>
     </header>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="container hero-content">
-        <h1>Welcome to ALMEEN ACADEMY</h1>
-        <p>Your journey towards excellence starts here.</p>
+
+    <main role="main">
+      <!-- Hero Section -->
+      <section class="about-hero animate-on-scroll" aria-label="Welcome section">
+        <div class="container about-hero__content">
+          <h1 class="about-hero__title">Welcome to ALMEEN ACADEMY</h1>
+          <p class="about-hero__subtitle">Your journey towards excellence starts here.</p>
+          <a href="#story" class="about-hero__cta">Learn More</a>
+        </div>
+      </section>
+
+      <!-- Story Section -->
+      <section id="story" class="story animate-on-scroll" aria-labelledby="story-title">
+        <div class="container">
+          <h2 id="story-title" class="section-title">Our Story</h2>
+          <div class="story__content">
+            <p>
+              Founded in <span class="placeholder">[Year]</span>, ALMEEN ACADEMY was
+              established with the vision to create an institution that offers
+              top-tier education with a focus on holistic development. Starting with a
+              small group of passionate educators and students, we have now grown into
+              one of the most respected schools in the region.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission Section -->
+      <section class="mission animate-on-scroll" aria-labelledby="mission-title">
+        <div class="container">
+          <h2 id="mission-title" class="section-title">Our Mission & Vision</h2>
+          <div class="mission__content">
+            <article class="mission__card vision">
+              <h3 class="mission__card-title">Our Vision</h3>
+              <p class="mission__card-text">
+                To be the most preferred school in our area which provides quality
+                education, nurtures talent and builds up competent, responsible and
+                well turned out human beings who will be ready to face the
+                challenges of life.
+              </p>
+            </article>
+            <article class="mission__card mission-statement">
+              <h3 class="mission__card-title">Our Mission</h3>
+              <p class="mission__card-text">
+                Almeen Academy promotes child-centered education leading to all-round
+                development of the students.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Values Section -->
+      <section class="values animate-on-scroll" aria-labelledby="values-title">
+        <div class="container">
+          <h2 id="values-title" class="section-title">Our Values</h2>
+          <div class="values__grid">
+            <article class="value-card">
+              <div class="value-card__icon">
+                <i class="fas fa-star" aria-hidden="true"></i>
+              </div>
+              <h3 class="value-card__title">Excellence</h3>
+              <p class="value-card__text">Striving for the highest standards in education.</p>
+            </article>
+            <article class="value-card">
+              <div class="value-card__icon">
+                <i class="fas fa-shield-alt" aria-hidden="true"></i>
+              </div>
+              <h3 class="value-card__title">Integrity</h3>
+              <p class="value-card__text">Building trust through honesty and fairness.</p>
+            </article>
+            <article class="value-card">
+              <div class="value-card__icon">
+                <i class="fas fa-handshake" aria-hidden="true"></i>
+              </div>
+              <h3 class="value-card__title">Respect</h3>
+              <p class="value-card__text">Honoring diversity and fostering a sense of community.</p>
+            </article>
+            <article class="value-card">
+              <div class="value-card__icon">
+                <i class="fas fa-lightbulb" aria-hidden="true"></i>
+              </div>
+              <h3 class="value-card__title">Innovation</h3>
+              <p class="value-card__text">Encouraging creativity and forward-thinking.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- School Policies Section -->
+      <section class="policies animate-on-scroll" aria-labelledby="policies-title">
+        <div class="container">
+          <h2 id="policies-title" class="section-title">School Policies</h2>
+          <p class="policies__intro">We follow a structured set of rules to maintain discipline and a healthy learning environment.</p>
+          <button id="rulesReadMoreBtn" class="btn btn--primary" aria-haspopup="dialog">
+            <span>Read School Policies</span>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- Modal with Tabs -->
+      <div id="schoolRulesModal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal__content">
+          <button id="closeRulesModalBtn" class="modal__close" aria-label="Close modal">
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </button>
+          <h2 id="modal-title" class="modal__title">Rules & Regulations</h2>
+
+          <div class="tabs" role="tablist">
+            <button class="tabs__button" role="tab" aria-selected="true" aria-controls="uniform-tab" id="uniform-tab-btn">
+              <i class="fas fa-tshirt" aria-hidden="true"></i>
+              <span>Uniform</span>
+            </button>
+            <button class="tabs__button" role="tab" aria-selected="false" aria-controls="timing-tab" id="timing-tab-btn">
+              <i class="fas fa-clock" aria-hidden="true"></i>
+              <span>Timings</span>
+            </button>
+            <button class="tabs__button" role="tab" aria-selected="false" aria-controls="attendance-tab" id="attendance-tab-btn">
+              <i class="fas fa-calendar-check" aria-hidden="true"></i>
+              <span>Attendance</span>
+            </button>
+            <button class="tabs__button" role="tab" aria-selected="false" aria-controls="discipline-tab" id="discipline-tab-btn">
+              <i class="fas fa-gavel" aria-hidden="true"></i>
+              <span>Discipline</span>
+            </button>
+          </div>
+
+          <div class="tabs__content">
+            <section id="uniform-tab" class="tab-panel" role="tabpanel" aria-labelledby="uniform-tab-btn">
+              <h3>School Uniform</h3>
+              
+              <h4>Summer Uniform (Mon, Tue, Thu, Fri)</h4>
+              <ul class="list">
+                <li><strong>Boys:</strong> Light grey lining shirt with monogram, dark grey pants, black shoes, white socks, school tie & belt.</li>
+                <li><strong>Girls:</strong> Same shirt, dark grey tunic with monogram, black shoes, white socks, tie & belt, hair in 2 ponies with black ribbon.</li>
+              </ul>
+
+              <h4>Salwar Kameez Option (Girls)</h4>
+              <ul class="list">
+                <li>Dark grey Koti with monogram</li>
+                <li>Light grey lining Kameez</li>
+                <li>Dark grey Salwar</li>
+              </ul>
+
+              <h4>House Uniform (Wed, Sat)</h4>
+              <ul class="list">
+                <li><strong>Boys:</strong> House T-shirt, Lower, white shoes & socks.</li>
+                <li><strong>Girls:</strong> House T-shirt, Lower or white Salwar Suit with House Koti, white socks.</li>
+              </ul>
+
+              <h4>Winter Uniform</h4>
+              <ul class="list">
+                <li>Dark grey sweater with monogram</li>
+                <li>Dark grey woollen cap</li>
+                <li>Navy blue blazer with monogram</li>
+              </ul>
+            </section>
+
+            <section id="timing-tab" class="tab-panel" role="tabpanel" aria-labelledby="timing-tab-btn" hidden>
+              <h3>School Timings</h3>
+              <ul class="list">
+                <li>School starts at 7:30 AM sharp.</li>
+                <li>Classes end at 12:30 PM on all working days.</li>
+              </ul>
+            </section>
+
+            <section id="attendance-tab" class="tab-panel" role="tabpanel" aria-labelledby="attendance-tab-btn" hidden>
+              <h3>Attendance Policy</h3>
+              <ul class="list">
+                <li>Minimum attendance required is 75%.</li>
+                <li>Absence without prior notice may lead to disciplinary action.</li>
+                <li>Medical leaves require proper documentation.</li>
+              </ul>
+            </section>
+
+            <section id="discipline-tab" class="tab-panel" role="tabpanel" aria-labelledby="discipline-tab-btn" hidden>
+              <h3>Discipline Rules</h3>
+              <ul class="list">
+                <li>Students are to maintain a high standard of good manners and general behavior.</li>
+                <li>Students should speak only English in the School Premises.</li>
+                <li>Students must be punctual and attend class in neat, tidy proper school uniform.</li>
+                <li>Articles found in school premises or in the classroom must be handed over to the office of the school.</li>
+                <li>Indisciplined acts will be liable for disciplinary action up to striking off the name from school permanently.</li>
+                <li>Students should not write, cover or scratch on school walls or damage the school furniture.</li>
+                <li>All students must abide by the rules & regulations of the school.</li>
+                <li>Presence of students on 15th August and 26th January is compulsory and students must come in uniform on these national festivals.</li>
+                <li>Use of mobile phones inside campus is strictly prohibited.</li>
+                <li>Students must respect teachers and fellow classmates.</li>
+              </ul>
+            </section>
+          </div>
+        </div>
       </div>
-    </section>
-    <!-- Story Section -->
-    <section class="story">
-      <h2 class="animate__fadeIn">Our Story</h2>
-      <p class="animate__fadeIn animate__delay-1s">
-        Founded in <span class="placeholder">[Year]</span>, ALMEEN ACADEMY was
-        established with the vision to create an institution that offers
-        top-tier education with a focus on holistic development. Starting with a
-        small group of passionate educators and students, we have now grown into
-        one of the most respected schools in the region.
-      </p>
-    </section>
-    <!--Mission section-->
-    <section class="mission">
-      <h2 class="animate__fadeIn">Our Mission & Vision</h2>
-      <div class="mission-content">
-        <div class="vision animate__fadeIn animate__delay-2s">
-          <h3>Our Vision</h3>
-          <p>
-            To be the most preferred school in our area which provides quality.
-            Education, nurtures talent and builds up competent, responsible and
-            well turned out human beings who will be ready to face the
-            challenges of life.
-          </p>
+
+      <!-- Team Section -->
+      <section class="team animate-on-scroll" aria-labelledby="team-title">
+        <div class="container">
+          <h2 id="team-title" class="section-title">Meet the Team</h2>
+          <div class="team__grid">
+            <article class="team-member">
+              <div class="team-member__image-wrapper">
+                <img src="Images_almeen/ganesh_sir.jfif" alt="Mr. Ganesh Pandey - Founder & Principal" class="team-member__image" loading="lazy" />
+                <div class="team-member__overlay">
+                  <div class="team-member__social">
+                    <a href="#" aria-label="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+              <h3 class="team-member__name">Mr. Ganesh Pandey</h3>
+              <p class="team-member__role">Founder & Principal</p>
+              <p class="team-member__bio">[Short bio about the founder/principal]</p>
+            </article>
+            <article class="team-member">
+              <div class="team-member__image-wrapper">
+                <img src="Images_almeen/image3.jfif" alt="Vice Principal" class="team-member__image" loading="lazy" />
+                <div class="team-member__overlay">
+                  <div class="team-member__social">
+                    <a href="#" aria-label="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+              <h3 class="team-member__name">[Name]</h3>
+              <p class="team-member__role">Vice Principal</p>
+              <p class="team-member__bio">[Short bio about the vice principal]</p>
+            </article>
+            <article class="team-member">
+              <div class="team-member__image-wrapper">
+                <img src="Images_almeen/image2.jfif" alt="Head of Curriculum" class="team-member__image" loading="lazy" />
+                <div class="team-member__overlay">
+                  <div class="team-member__social">
+                    <a href="#" aria-label="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+              <h3 class="team-member__name">[Name]</h3>
+              <p class="team-member__role">Head of Curriculum & Teaching</p>
+              <p class="team-member__bio">[Short bio about the curriculum head]</p>
+            </article>
+          </div>
         </div>
-        <div class="mission-statement animate__fadeIn animate__delay-2s">
-          <h3>Our Mission</h3>
-          <p>
-            Almeen Academy promote child centered Education Leading to all round
-            development of the students.
-          </p>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials animate-on-scroll" aria-labelledby="testimonials-title">
+        <div class="container">
+          <h2 id="testimonials-title" class="section-title">What Our Students & Parents Say</h2>
+          <div class="testimonials__grid">
+            <blockquote class="testimonial-card">
+              <div class="testimonial-card__quote">
+                <i class="fas fa-quote-left" aria-hidden="true"></i>
+                <p class="testimonial-card__text">
+                  "ALMEEN ACADEMY provided my child with not only the knowledge but
+                  also the values needed to succeed in life!"
+                </p>
+              </div>
+              <footer class="testimonial-card__footer">
+                <img src="Images_almeen/parent1.jpg" alt="Parent" class="testimonial-card__image" loading="lazy" />
+                <cite class="testimonial-card__author">[Parent Name], [Role]</cite>
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial-card">
+              <div class="testimonial-card__quote">
+                <i class="fas fa-quote-left" aria-hidden="true"></i>
+                <p class="testimonial-card__text">
+                  "The teachers at ALMEEN ACADEMY have been amazing mentors, shaping
+                  me into a better student and person."
+                </p>
+              </div>
+              <footer class="testimonial-card__footer">
+                <img src="Images_almeen/student1.jpg" alt="Student" class="testimonial-card__image" loading="lazy" />
+                <cite class="testimonial-card__author">[Student Name], [Grade]</cite>
+              </footer>
+            </blockquote>
+          </div>
         </div>
-      </div>
-    </section>
-    <!--values section-->
-    <section class="values">
-      <h2 class="animate__fadeIn">Our Values</h2>
-      <div class="value-cards">
-        <div class="value-card animate__fadeIn animate__delay-3s">
-          <h3>Excellence</h3>
-          <p>Striving for the highest standards in education.</p>
-        </div>
-        <div class="value-card animate__fadeIn animate__delay-3s">
-          <h3>Integrity</h3>
-          <p>Building trust through honesty and fairness.</p>
-        </div>
-        <div class="value-card animate__fadeIn animate__delay-3s">
-          <h3>Respect</h3>
-          <p>Honoring diversity and fostering a sense of community.</p>
-        </div>
-        <div class="value-card animate__fadeIn animate__delay-3s">
-          <h3>Innovation</h3>
-          <p>Encouraging creativity and forward-thinking.</p>
-        </div>
-      </div>
-    </section>
-<!-- Rules & Regulations Section -->
-<section>
-  <h2>School Policies</h2>
-  <p>We follow a structured set of rules to maintain discipline and a healthy learning environment.</p>
-
-  <button id="rulesReadMoreBtn" class="btn-rules">Read School Policies</button>
-</section>
-
-<!-- Modal with Tabs -->
-<div id="schoolRulesModal" class="modal-rules">
-  <div class="modal-rules-content">
-    <span id="closeRulesModalBtn" class="close-rules-btn">&times;</span>
-    <h2>Rules & Regulations</h2>
-
-    <!-- Tabs Navigation -->
-    <div class="tab-nav">
-      <button class="tablink " onclick="openTab(event, 'uniform')">Uniform</button>
-      <button class="tablink" onclick="openTab(event, 'timing')">Timings</button>
-      <button class="tablink" onclick="openTab(event, 'attendance')">Attendance</button>
-      <button class="tablink" onclick="openTab(event, 'discipline')">Discipline</button>
-    </div>
-
-<!-- Tabs Contents -->
-<div id="uniform" class="tabcontent">
-  <h3>School Uniform</h3>
-  
-  <h4>Summer Uniform (Mon, Tue, Thu, Fri)</h4>
-  <ul>
-    <li><strong>Boys:</strong> Light grey lining shirt with monogram, dark grey pants, black shoes, white socks, school tie & belt.</li>
-    <li><strong>Girls:</strong> Same shirt, dark grey tunic with monogram, black shoes, white socks, tie & belt, hair in 2 ponies with black ribbon.</li>
-  </ul>
-
-  <h4>Salwar Kameez Option (Girls)</h4>
-  <ul>
-    <li>Dark grey Koti with monogram</li>
-    <li>Light grey lining Kameez</li>
-    <li>Dark grey Salwar</li>
-  </ul>
-
-  <h4>House Uniform (Wed, Sat)</h4>
-  <ul>
-    <li><strong>Boys:</strong> House T-shirt, Lower, white shoes & socks.</li>
-    <li><strong>Girls:</strong> House T-shirt, Lower or white Salwar Suit with House Koti, white socks.</li>
-  </ul>
-
-  <h4>Winter Uniform</h4>
-  <ul>
-    <li>Dark grey sweater with monogram</li>
-    <li>Dark grey woollen cap</li>
-    <li>Navy blue blazer with monogram</li>
-  </ul>
-</div>
-
-
-<div id="timing" class="tabcontent">
-  <h3>School Timings</h3>
-  <ul>
-    <li>School starts at 7:30 AM sharp.</li>
-    <li>Classes end at 12:30 PM on all working days.</li>
-  </ul>
-</div>
-
-<div id="attendance" class="tabcontent">
-  <h3>Attendance Policy</h3>
-  <ul>
-    <li>Minimum attendance required is 75%.</li>
-    <li>Absence without prior notice may lead to disciplinary action.</li>
-    <li>Medical leaves require proper documentation.</li>
-  </ul>
-</div>
-
-<div id="discipline" class="tabcontent">
-  <h3>Discipline Rules</h3>
-  <ul>
-    <li>Student are to aintain a high standard of good manners and general behavior.</li>
-    <li>Students should speak only English in the School Premises.</li>
-    <li>Student must be punctual and attend the class in neat, tidy proper school uniform.</li>
-    <li>Articles found in school premises or in the class room must be handed over to office of the school.</li>
-    <li>In disciplined Act will be liable for disciplinary action up to struck of the name from school permanently.</li>
-    <li>Student should not write cover or scratch on school wall or defect the school furniture.</li>
-    <li>All the students must abide by the rule & regulation of the school.</li>
-    <li>Presence of students on 15th August and 26th January is compulsory and students must come in uniform on this national festival.</li>
-    <li>Use of mobile phones inside campus is strictly prohibited.</li>
-    <li>Students must respect teachers and fellow classmates.</li>
-  </ul>
-</div>
-
-  </div>
-</div>
-    <!--Meet the team section-->
-    <section class="team">
-      <h2 class="animate__fadeIn">Meet the Team</h2>
-      <div class="team-members">
-        <div class="team-member animate__fadeIn animate__delay-4s">
-          <img src="Images_almeen/ganesh_sir.jfif" alt="Principal" />
-          <p><strong>Mr. Ganesh Pandey</strong> - Founder & Principal</p>
-          <p>[Short bio about the founder/principal]</p>
-        </div>
-        <div class="team-member animate__fadeIn animate__delay-4s">
-          <img src="Images_almeen/image3.jfif" alt="Vice Principal" />
-          <p><strong>[Name]</strong> - Vice Principal</p>
-          <p>[Short bio about the vice principal]</p>
-        </div>
-        <div class="team-member animate__fadeIn animate__delay-4s">
-          <img src="Images_almeen/image2.jfif" alt="Head of Curriculum" />
-          <p><strong>[Name]</strong> - Head of Curriculum & Teaching</p>
-          <p>[Short bio about the curriculum head]</p>
-        </div>
-      </div>
-    </section>
-    <!--testimonials section-->
-    <section class="testimonials">
-      <h2 class="animate__fadeIn">What Our Students & Parents Say</h2>
-      <div class="testimonial-cards">
-        <div class="testimonial-card animate__fadeIn animate__delay-5s">
-          <p>
-            "ALMEEN ACADEMY provided my child with not only the knowledge but
-            also the values needed to succeed in life!"
-          </p>
-          <p>- [Parent Name], [Role]</p>
-        </div>
-        <div class="testimonial-card animate__fadeIn animate__delay-5s">
-          <p>
-            "The teachers at ALMEEN ACADEMY have been amazing mentors, shaping
-            me into a better student and person."
-          </p>
-          <p>- [Student Name], [Grade]</p>
-        </div>
-      </div>
-    </section>
-  <!-- Back to Top Button -->
-<button id="backToTop" class="button" title="Back to Top">
-  <svg class="svgIcon" viewBox="0 0 384 512">
-    <path
-      d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-    ></path>
-  </svg>
-</button>
+      </section>
+    </main>
 
     <!-- Footer -->
-      <footer class="footer">
-        <div class="container footer-content">
-          <div class="footer-col">
-            <img src="Images_almeen/logoalmeen.jfif" alt="Logo" width="60" />
-            <p>Almeen Academy</p>
-            <p>Nurturing Minds, Shaping Futures</p>
-          </div>
-          <div class="footer-col">
-            <h4>Contact Us</h4>
-            <p>📞 +92 300 1234567</p>
-            <p>📧 info@almeenacademy.edu</p>
-            <p>📍 123 Main Street, Gorakhpur Uttarpradesh</p>
-          </div>
-          <div class="footer-col">
-            <h4>Social Media</h4>
-            <p><a href="https://www.facebook.com/share/18uWfA1YBm/?mibextid=qi20mg" target="_blank">Facebook</a></p>
-          <p><a href="https://www.instagram.com/almeenacademy?utm_source=qr&igsh=MWhhMjJpd3Zmd2dg==" target="_blank">Instagram</a></p>
-          <p><a href="https://www.youtube.com/@GaneshPandeyRaj" target="_blank">YouTube</a></p>
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-col">
+          <img src="Images_almeen/logoalmeen.jfif" alt="Logo" width="80" />
+          <p>Almeen Academy</p>
+          <p>Nurturing Minds, Shaping Futures</p>
+          <p>Affiliation Number : 2133245 (Affiliated to CBSE Board, New Delhi)</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-phone"></i> +91 9696444474</p>
+          <p><i class="fas fa-envelope"></i> almeenacademy2018@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Pokharbhinda, Bhathat Bailo Road, Gorakhpur</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/share/18uWfA1YBm/?mibextid=qi20mg" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/almeenacademy?utm_source=qr&igsh=MWhhMjJpd3Zmd2dg==" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@GaneshPandeyRaj" target="_blank" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
           </div>
         </div>
-        <p class="copyright">
-          &copy; 2025 Almeen Academy. All rights reserved.
-        </p>
-      </footer>
-    
-    <!-- Darkmode button
-    <button id="darkModeToggle">🌙</button>
+      </div>
+      <p class="copyright">&copy; 2025 Almeen Academy. All rights reserved.</p>
+    </footer>
 
-    <script src="js/theme-toggle.js"></script> -->
-    <!-- External JavaScript for Animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
-    <script src="js/commons.js"></script>
-    <script src="js/script.js" ></script>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="button" title="Back to Top">
+      <svg class="svgIcon" viewBox="0 0 384 512">
+        <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+      </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
+    <script src="js/commons.js" defer></script>
+    <script src="js/script.js" defer></script>
   </body>
 </html>

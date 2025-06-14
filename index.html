@@ -57,156 +57,226 @@
           onclick="toggleMenu()"
           aria-label="Toggle navigation menu"
         >
-          ☰
+          <span></span>
         </button>
       </div>
     </header>
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="container hero-content">
-        <h1>Welcome to Almeen Academy</h1>
-        <p>Nurturing Minds, Shaping Futures Since 1995</p>
-        <!-- From Uiverse.io by gharsh11032000 --> 
-<button class="animated-button">
-  <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-    ></path>
-  </svg>
-  <span class="text">Learn More</span>
-  <span class="circle"></span>
-  <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
-    <path
-      d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-    ></path>
-  </svg>
-</button>
-
-
+    <section class="hero hero-bg-image" style="background-image: url(Images_almeen/campus_hd.jfif);">
+      <div class="hero-center-content">
+        <h1 class="hero-title">Welcome to Almeen Academy</h1>
+        <p class="hero-subtitle">Nurturing Minds, Shaping Futures Since 1995</p>
+        <a href="about.html" class="hero-learn-btn">Learn More <span class="arrow">→</span></a>
       </div>
     </section>
 
-<div class="all-principals-wrapper">
-  <!-- Card 1 -->
-  <div class="principal-card">
-    <div class="principal-photo">
-      <img src="Images_almeen/ganesh_sir.jfif" alt="Principal">
-    </div>
-    <div class="principal-message">
-      <h3>Principal's Message</h3>
-      <p>Welcome to ALMEEN ACADEMY... <span>[...]</span></p>
-      <button class="read-more-btn" onclick="openModal(1)">Read More</button>
-    </div>
-  </div>
-
-  <!-- Card 2 -->
-  <div class="principal-card">
-    <div class="principal-photo">
-      <img src="Images_almeen/ganesh_sir.jfif" alt="Principal">
-    </div>
-    <div class="principal-message">
-      <h3>Principal's Message</h3>
-      <p>Welcome to ALMEEN ACADEMY... <span>[...]</span></p>
-      <button class="read-more-btn" onclick="openModal(2)">Read More</button>
-    </div>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="principal-card">
-    <div class="principal-photo">
-      <img src="Images_almeen/ganesh_sir.jfif" alt="Principal">
-    </div>
-    <div class="principal-message">
-      <h3>Principal's Message</h3>
-      <p>Welcome to ALMEEN ACADEMY... <span>[...]</span></p>
-      <button class="read-more-btn" onclick="openModal(3)">Read More</button>
-    </div>
-  </div>
-</div>
-
-<!-- Modal -->
-<div id="modal" class="modal" onclick="closeOutside(event)">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2>Principal's Message</h2>
-    <p id="modalText">
-      <!-- Full message will appear here -->
-    </p>
-  </div>
-</div>
-    <!-- News Section -->
-    <section class="section light-bg">
+    <!-- Leadership Section -->
+    <section class="leadership-section">
       <div class="container">
-        <h2>Latest News</h2>
-        <div class="card">
-          <h3>Annual Cultural Week – Celebrating Diversity</h3>
-          <p class="date">April 5, 2025</p>
-          <p>
-            Almeen Academy recently concluded its vibrant Cultural Week filled
-            with music, dance, food stalls, and inter-class competitions.
-            Students showcased talents from various backgrounds, promoting unity
-            in diversity.
-          </p>
+        <div class="section-header">
+          <span class="section-subtitle">Meet Our Leaders</span>
+          <h2 class="section-title">Leadership Team</h2>
+        </div>
+        <div class="leadership-container">
+          <!-- Principal Card -->
+          <div class="leadership-card">
+            <div class="card-image">
+              <img src="Images_almeen/ganesh_sir.jfif" alt="Principal">
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <h3>Mr. Ganesh Pandey</h3>
+                <span class="position">Principal</span>
+              </div>
+              <p class="message">Welcome to ALMEEN ACADEMY, where excellence meets opportunity. Our commitment to academic excellence, character development, and holistic growth sets us apart...</p>
+              <button class="read-more" onclick="openMessage('principal')">
+                <span>Read Full Message</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Director Card -->
+          <div class="leadership-card">
+            <div class="card-image">
+              <img src="Images_almeen/upd6.jpeg" alt="Director">
+            </div>
+            <div class="card-content">
+              <div class="card-header">
+                <h3>Mr. Rajesh Pandey</h3>
+                <span class="position">Director</span>
+              </div>
+              <p class="message">At Almeen Academy, we believe in creating an environment that nurtures innovation, critical thinking, and leadership skills. Our vision is to shape future leaders...</p>
+              <button class="read-more" onclick="openMessage('director')">
+                <span>Read Full Message</span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!-- 🧮 Stats Section -->
-    <section class="stats-section" id="statsSection">
-      <div class="stats-container">
-        <div class="stat">
-          <h2 class="counter" data-target="1200" data-suffix="+">0</h2>
-          <p>Students Enrolled</p>
+
+    <!-- Message Modal -->
+    <div class="message-modal" id="messageModal">
+      <button class="close-modal" onclick="closeMessage()" aria-label="Close modal">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="16" fill="#fff"/>
+          <path d="M10 10L22 22" stroke="#e63946" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M22 10L10 22" stroke="#e63946" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle"></h2>
+          <div class="modal-subtitle">Leadership Message</div>
         </div>
-        <div class="stat">
-          <h2 class="counter" data-target="95" data-suffix="%">0</h2>
-          <p>Passing Percentage</p>
+        <div class="modal-body">
+          <p id="modalMessage"></p>
         </div>
-        <div class="stat">
-          <h2 class="counter" data-target="85" data-suffix="+">0</h2>
-          <p>Staff Members</p>
+      </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features-section">
+      <div class="container">
+        <h2 class="section-title">Why Choose Almeen Academy?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📚</div>
+            <h3>Quality Education</h3>
+            <p>CBSE curriculum with modern teaching methodologies</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">👨‍🏫</div>
+            <h3>Expert Faculty</h3>
+            <p>Highly qualified and experienced teaching staff</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3>Academic Excellence</h3>
+            <p>Consistent track record of outstanding results</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎨</div>
+            <h3>Holistic Development</h3>
+            <p>Focus on sports, arts, and extracurricular activities</p>
+          </div>
         </div>
       </div>
     </section>
 
-<!-- Back to Top Button -->
-<button id="backToTop" class="button" title="Back to Top">
-  <svg class="svgIcon" viewBox="0 0 384 512">
-    <path
-      d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
-    ></path>
-  </svg>
-</button>
+    <!-- News/Notice Section -->
+  
+    <section class="notice-section">
+      <div class="container">
+        <h2 class="section-title">Notices & Announcements</h2>
+        <div class="notice-list vertical">
+          <div class="notice-card" data-title="Annual Cultural Week" data-date="April 5, 2025" data-content="Celebrating diversity through music, dance, and cultural performances. <a href='#'>See details</a>">
+            <div class="notice-title">Annual Cultural Week</div>
+            <div class="notice-date">April 5, 2025</div>
+            <div class="notice-preview">Celebrating diversity through music, dance, and cultural performances.</div>
+          </div>
+          <div class="notice-card" data-title="Science Exhibition" data-date="March 20, 2025" data-content="Students showcase innovative projects at annual science fair. <a href='#'>Project Gallery</a>">
+            <div class="notice-title">Science Exhibition</div>
+            <div class="notice-date">March 20, 2025</div>
+            <div class="notice-preview">Students showcase innovative projects at annual science fair.</div>
+          </div>
+          <div class="notice-card" data-title="Sports Day" data-date="March 15, 2025" data-content="Annual sports meet featuring various athletic competitions. <a href='#'>Event Schedule</a>">
+            <div class="notice-title">Sports Day</div>
+            <div class="notice-date">March 15, 2025</div>
+            <div class="notice-preview">Annual sports meet featuring various athletic competitions.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    </section>
+    <!-- Notice Modal -->
+    <div class="notice-modal" id="noticeModal">
+      <div class="notice-modal-content">
+        <button class="notice-modal-close" onclick="closeNoticeModal()" aria-label="Close notice modal">&times;</button>
+        <h3 id="noticeModalTitle"></h3>
+        <div class="notice-modal-date" id="noticeModalDate"></div>
+        <div class="notice-modal-body" id="noticeModalBody"></div>
+      </div>
+    </div>
 
+    <!-- Stats Section -->
+    <section class="stats-section block-stats" id="statsSection">
+      <div class="container stats-block">
+        <div class="stats-row">
+          <div class="stat">
+            <h2 class="counter" data-target="1200" data-suffix="+">0</h2>
+            <p>Students Enrolled</p>
+          </div>
+          <div class="stat">
+            <h2 class="counter" data-target="95" data-suffix="%">0</h2>
+            <p>Passing Percentage</p>
+          </div>
+          <div class="stat">
+            <h2 class="counter" data-target="85" data-suffix="+">0</h2>
+            <p>Staff Members</p>
+          </div>
+          <div class="stat">
+            <h2 class="counter" data-target="25" data-suffix="+">0</h2>
+            <p>Years of Excellence</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Call to Action -->
+    <section class="cta-section enhanced-cta">
+      <div class="container">
+        <h2>Ready to Join Our Community?</h2>
+        <p>Take the first step towards a bright future with Almeen Academy</p>
+        <a href="admission.html" class="cta-button">Apply Now</a>
+      </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="button" title="Back to Top">
+      <svg class="svgIcon" viewBox="0 0 384 512">
+        <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
+      </svg>
+    </button>
 
     <!-- Footer -->
     <footer class="footer">
       <div class="container footer-content">
         <div class="footer-col">
-          <img src="Images_almeen/logoalmeen.jfif" alt="Logo" width="60" />
+          <img src="Images_almeen/logoalmeen.jfif" alt="Logo" width="80" />
           <p>Almeen Academy</p>
           <p>Nurturing Minds, Shaping Futures</p>
           <p>Affiliation Number : 2133245 (Affiliated to CBSE Board, New Delhi)</p>
         </div>
         <div class="footer-col">
           <h4>Contact Us</h4>
-          <p>📞 +91 9696444474</p>
-          <p>📧 almeenacademy2018@gmail.com</p>
-          <p>📍 Pokharbhinda, Bhathat Bailo Road, Gorakhpur</p>
+          <p><i class="fas fa-phone"></i> +91 9696444474</p>
+          <p><i class="fas fa-envelope"></i> almeenacademy2018@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Pokharbhinda, Bhathat Bailo Road, Gorakhpur</p>
         </div>
         <div class="footer-col">
-          <h4>Social Media</h4>
-          <p><a href="https://www.facebook.com/share/18uWfA1YBm/?mibextid=qi20mg" target="_blank">Facebook</a></p>
-          <p><a href="https://www.instagram.com/almeenacademy?utm_source=qr&igsh=MWhhMjJpd3Zmd2dg==" target="_blank">Instagram</a></p>
-          <p><a href="https://www.youtube.com/@GaneshPandeyRaj" target="_blank">YouTube</a></p>
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/share/18uWfA1YBm/?mibextid=qi20mg" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/almeenacademy?utm_source=qr&igsh=MWhhMjJpd3Zmd2dg==" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@GaneshPandeyRaj" target="_blank" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
         </div>
       </div>
       <p class="copyright">&copy; 2025 Almeen Academy. All rights reserved.</p>
     </footer>
 
-    <!-- <button id="darkModeToggle">🌙</button>
-
-<script src="js/darkmode.js"></script> -->
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="js/commons.js"></script>
     <script src="js/script.js"></script>
   </body>

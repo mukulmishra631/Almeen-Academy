@@ -5,7 +5,7 @@
     <title>Academics | Your Website</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- <link rel="stylesheet" href="css/academics.css"> -->
-    <link rel="stylesheet" href="css/academics.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Favicon (Browser tab icon) -->
     <link
       rel="icon"
@@ -58,7 +58,7 @@
           onclick="toggleMenu()"
           aria-label="Toggle navigation menu"
         >
-          ☰
+          <span></span>
         </button>
       </div>
     </header>
@@ -145,9 +145,40 @@
     </button>
 
     <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 ALMEEN ACADEMY. All Rights Reserved.</p>
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-col">
+          <img src="Images_almeen/logoalmeen.jfif" alt="Logo" width="80" />
+          <p>Almeen Academy</p>
+          <p>Nurturing Minds, Shaping Futures</p>
+          <p>Affiliation Number : 2133245 (Affiliated to CBSE Board, New Delhi)</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-phone"></i> +91 9696444474</p>
+          <p><i class="fas fa-envelope"></i> almeenacademy2018@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Pokharbhinda, Bhathat Bailo Road, Gorakhpur</p>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/share/18uWfA1YBm/?mibextid=qi20mg" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/almeenacademy?utm_source=qr&igsh=MWhhMjJpd3Zmd2dg==" target="_blank" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/@GaneshPandeyRaj" target="_blank" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2025 Almeen Academy. All rights reserved.</p>
     </footer>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="js/commons.js"></script>
     <script src="js/script.js"></script>
   </body>
