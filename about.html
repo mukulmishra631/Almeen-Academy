@@ -50,47 +50,51 @@
         <div class="container about-hero__content">
           <h1 class="about-hero__title">Welcome to ALMEEN ACADEMY</h1>
           <p class="about-hero__subtitle">Your journey towards excellence starts here.</p>
-          <a href="#story" class="about-hero__cta">Learn More</a>
+          <a href="#story-section" class="about-hero__cta">Learn More</a>
         </div>
       </section>
 
-      <!-- Story Section -->
-      <section id="story" class="story animate-on-scroll" aria-labelledby="story-title">
-        <div class="container">
-          <h2 id="story-title" class="section-title">Our Story</h2>
-          <div class="story__content">
+      <!-- Story section -->
+      <section class="story-section" id="story-section">
+        <div class="story-container">
+          <!-- Left Section: Image -->
+          <div class="story-image">
+            <img src="../Images_almeen/campus_hd.jfif" alt="Almeen Academy campus view" />
+          </div>
+          <!-- Right Section: Text Content -->
+          <div class="story-content">
+            <h2 class="story-heading">Our Story</h2>
             <p>
-              Founded in <span class="placeholder">[Year]</span>, ALMEEN ACADEMY was
-              established with the vision to create an institution that offers
-              top-tier education with a focus on holistic development. Starting with a
-              small group of passionate educators and students, we have now grown into
-              one of the most respected schools in the region.
+              Almeen Academy was founded with a vision to provide excellence in education. Our journey began with a commitment to nurturing young minds and fostering an environment of continuous learning and growth.
+            </p>
+            <p>
+              Today, we stand as a testament to quality education, combining traditional values with modern teaching methodologies. Our dedicated faculty and vibrant community ensure that every student thrives academically and personally.
+            </p>
+            <p>
+              Join us as we continue to inspire, innovate, and lead the way in holistic education.
             </p>
           </div>
         </div>
       </section>
-
       <!-- Mission Section -->
-      <section class="mission animate-on-scroll" aria-labelledby="mission-title">
-        <div class="container">
-          <h2 id="mission-title" class="section-title">Our Mission & Vision</h2>
-          <div class="mission__content">
-            <article class="mission__card vision">
-              <h3 class="mission__card-title">Our Vision</h3>
-              <p class="mission__card-text">
-                To be the most preferred school in our area which provides quality
-                education, nurtures talent and builds up competent, responsible and
-                well turned out human beings who will be ready to face the
-                challenges of life.
+      <section class="mission-section animate-on-scroll" aria-labelledby="mission-title">
+        <div class="mission-container">
+          <h2 id="mission-title" class="mission-title">Our Mission & Vision</h2>
+          <div class="mission-cards">
+            <div class="mission-card mission-card--vision">
+              <div class="mission-card__icon"><i class="fas fa-eye" aria-hidden="true"></i></div>
+              <h3 class="mission-card-title">Our Vision</h3>
+              <p class="mission-card-text">
+                To be the most preferred school in our area which provides quality education, nurtures talent and builds up competent, responsible and well turned out human beings who will be ready to face the challenges of life.
               </p>
-            </article>
-            <article class="mission__card mission-statement">
-              <h3 class="mission__card-title">Our Mission</h3>
-              <p class="mission__card-text">
-                Almeen Academy promotes child-centered education leading to all-round
-                development of the students.
+            </div>
+            <div class="mission-card mission-card--mission">
+              <div class="mission-card__icon"><i class="fas fa-bullseye" aria-hidden="true"></i></div>
+              <h3 class="mission-card-title">Our Mission</h3>
+              <p class="mission-card-text">
+                Almeen Academy promotes child-centered education leading to all-round development of the students.
               </p>
-            </article>
+            </div>
           </div>
         </div>
       </section>
@@ -99,35 +103,23 @@
       <section class="values animate-on-scroll" aria-labelledby="values-title">
         <div class="container">
           <h2 id="values-title" class="section-title">Our Values</h2>
-          <div class="values__grid">
-            <article class="value-card">
-              <div class="value-card__icon">
-                <i class="fas fa-star" aria-hidden="true"></i>
-              </div>
-              <h3 class="value-card__title">Excellence</h3>
-              <p class="value-card__text">Striving for the highest standards in education.</p>
-            </article>
-            <article class="value-card">
-              <div class="value-card__icon">
-                <i class="fas fa-shield-alt" aria-hidden="true"></i>
-              </div>
-              <h3 class="value-card__title">Integrity</h3>
-              <p class="value-card__text">Building trust through honesty and fairness.</p>
-            </article>
-            <article class="value-card">
-              <div class="value-card__icon">
-                <i class="fas fa-handshake" aria-hidden="true"></i>
-              </div>
-              <h3 class="value-card__title">Respect</h3>
-              <p class="value-card__text">Honoring diversity and fostering a sense of community.</p>
-            </article>
-            <article class="value-card">
-              <div class="value-card__icon">
-                <i class="fas fa-lightbulb" aria-hidden="true"></i>
-              </div>
-              <h3 class="value-card__title">Innovation</h3>
-              <p class="value-card__text">Encouraging creativity and forward-thinking.</p>
-            </article>
+          <div class="values-icon-grid" role="list">
+            <div class="value-icon-card" role="listitem" tabindex="0" aria-label="Excellence">
+              <span class="value-icon"><i class="fas fa-star" aria-hidden="true"></i></span>
+              <span class="value-label">Excellence</span>
+            </div>
+            <div class="value-icon-card" role="listitem" tabindex="0" aria-label="Integrity">
+              <span class="value-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></span>
+              <span class="value-label">Integrity</span>
+            </div>
+            <div class="value-icon-card" role="listitem" tabindex="0" aria-label="Respect">
+              <span class="value-icon"><i class="fas fa-handshake" aria-hidden="true"></i></span>
+              <span class="value-label">Respect</span>
+            </div>
+            <div class="value-icon-card" role="listitem" tabindex="0" aria-label="Innovation">
+              <span class="value-icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></span>
+              <span class="value-label">Innovation</span>
+            </div>
           </div>
         </div>
       </section>
@@ -242,48 +234,54 @@
       <section class="team animate-on-scroll" aria-labelledby="team-title">
         <div class="container">
           <h2 id="team-title" class="section-title">Meet the Team</h2>
-          <div class="team__grid">
-            <article class="team-member">
+          <div class="team__grid" role="list">
+            <article class="team-member" role="listitem">
               <div class="team-member__image-wrapper">
-                <img src="Images_almeen/ganesh_sir.jfif" alt="Mr. Ganesh Pandey - Founder & Principal" class="team-member__image" loading="lazy" />
-                <div class="team-member__overlay">
-                  <div class="team-member__social">
-                    <a href="#" aria-label="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                    <a href="#" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-                  </div>
-                </div>
+                <img src="Images_almeen/directorAlmeen.jpeg" alt="Mr. M Siddique - Founder & Director" class="team-member__image" loading="lazy" />
               </div>
-              <h3 class="team-member__name">Mr. Ganesh Pandey</h3>
-              <p class="team-member__role">Founder & Principal</p>
-              <p class="team-member__bio">[Short bio about the founder/principal]</p>
+              <h3 class="team-member__name">Mr. M Siddique</h3>
+              <p class="team-member__role">Founder & Director</p>
+              <p class="team-member__bio">Visionary founder and director, dedicated to fostering a nurturing and innovative learning environment at Almeen Academy.</p>
+              <div class="team-member__social">
+                <a href="mailto:someone@example.com" class="email" aria-label="Email Name">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp" aria-label="WhatsApp Name" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
             </article>
-            <article class="team-member">
+            <article class="team-member" role="listitem">
               <div class="team-member__image-wrapper">
-                <img src="Images_almeen/image3.jfif" alt="Vice Principal" class="team-member__image" loading="lazy" />
-                <div class="team-member__overlay">
-                  <div class="team-member__social">
-                    <a href="#" aria-label="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                    <a href="#" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-                  </div>
-                </div>
+                <img src="Images_almeen/principalalmeen.jpeg" alt="Ganesh Pandey - Principal" class="team-member__image" loading="lazy" />
               </div>
-              <h3 class="team-member__name">[Name]</h3>
+              <h3 class="team-member__name">Ganesh Pandey</h3>
+              <p class="team-member__role">Principal</p>
+              <p class="team-member__bio">Dynamic principal, passionate about academic excellence and holistic student development at Almeen Academy.</p>
+              <div class="team-member__social">
+                <a href="mailto:someone@example.com" class="email" aria-label="Email Name">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp" aria-label="WhatsApp Name" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div>
+            </article>
+            <article class="team-member" role="listitem">
+              <div class="team-member__image-wrapper">
+                <img src="Images_almeen/viceprincipalalmeen.jpg" alt="Kamursina - Vice Principal" class="team-member__image" loading="lazy" />
+              </div>
+              <h3 class="team-member__name">Kamursina</h3>
               <p class="team-member__role">Vice Principal</p>
-              <p class="team-member__bio">[Short bio about the vice principal]</p>
-            </article>
-            <article class="team-member">
-              <div class="team-member__image-wrapper">
-                <img src="Images_almeen/image2.jfif" alt="Head of Curriculum" class="team-member__image" loading="lazy" />
-                <div class="team-member__overlay">
-                  <div class="team-member__social">
-                    <a href="#" aria-label="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                    <a href="#" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
-                  </div>
-                </div>
+              <p class="team-member__bio">Supportive vice principal, committed to curriculum innovation and student success at Almeen Academy.</p>
+              <div class="team-member__social">
+                <a href="mailto:someone@example.com" class="email" aria-label="Email Name">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp" aria-label="WhatsApp Name" target="_blank">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
               </div>
-              <h3 class="team-member__name">[Name]</h3>
-              <p class="team-member__role">Head of Curriculum & Teaching</p>
-              <p class="team-member__bio">[Short bio about the curriculum head]</p>
             </article>
           </div>
         </div>

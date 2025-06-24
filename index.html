@@ -70,72 +70,85 @@
       </div>
     </section>
 
-    <!-- Leadership Section -->
-    <section class="leadership-section">
+    <!-- Leadership Section (Direct Cards, No Modal) -->
+    <section class="leadership-section" id="leadership-section">
       <div class="container">
         <div class="section-header">
           <span class="section-subtitle">Meet Our Leaders</span>
           <h2 class="section-title">Leadership Team</h2>
         </div>
-        <div class="leadership-container">
-          <!-- Principal Card -->
-          <div class="leadership-card">
-            <div class="card-image">
-              <img src="Images_almeen/ganesh_sir.jfif" alt="Principal">
-            </div>
-            <div class="card-content">
-              <div class="card-header">
-                <h3>Mr. Ganesh Pandey</h3>
-                <span class="position">Principal</span>
-              </div>
-              <p class="message">Welcome to ALMEEN ACADEMY, where excellence meets opportunity. Our commitment to academic excellence, character development, and holistic growth sets us apart...</p>
-              <button class="read-more" onclick="openMessage('principal')">
-                <span>Read Full Message</span>
-                <i class="fas fa-arrow-right"></i>
-              </button>
-            </div>
-          </div>
-
+        <div class="leadership-cards">
           <!-- Director Card -->
           <div class="leadership-card">
-            <div class="card-image">
-              <img src="Images_almeen/upd6.jpeg" alt="Director">
+            <div class="leadership-img-wrapper">
+              <img class="leadership-img" src="Images_almeen/directorAlmeen.jpeg" alt="Mr. Rajesh Pandey - Director" loading="lazy" />
             </div>
-            <div class="card-content">
-              <div class="card-header">
-                <h3>Mr. Rajesh Pandey</h3>
-                <span class="position">Director</span>
+            <div class="leadership-info">
+              <div class="leader-name">Mr. Rajesh Pandey</div>
+              <div class="leader-role">Director</div>
+              <div class="leader-message">
+                At Almeen Academy, we believe in creating an environment that nurtures innovation, critical thinking, and leadership skills. Our vision is to shape future leaders who will make a positive impact on society.<br><br>
+                Our commitment to excellence is reflected in:<br>
+                • State-of-the-art facilities<br>
+                • Experienced faculty<br>
+                • Comprehensive curriculum<br>
+                • Focus on practical learning<br>
+                • Global exposure opportunities<br><br>
+                We are dedicated to providing a transformative educational experience that prepares students for the challenges of tomorrow.
               </div>
-              <p class="message">At Almeen Academy, we believe in creating an environment that nurtures innovation, critical thinking, and leadership skills. Our vision is to shape future leaders...</p>
-              <button class="read-more" onclick="openMessage('director')">
-                <span>Read Full Message</span>
-                <i class="fas fa-arrow-right"></i>
-              </button>
+              <div class="leader-social-row">
+                <a href="mailto:director@email.com" class="leader-social--icon email" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/919999999999" class="leader-social--icon whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Principal Card -->
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img class="leadership-img" src="Images_almeen/principalalmeen.jpeg" alt="Mr. Ganesh Pandey - Principal" loading="lazy" />
+            </div>
+            <div class="leadership-info">
+              <div class="leader-name">Mr. Ganesh Pandey</div>
+              <div class="leader-role">Principal</div>
+              <div class="leader-message">
+                Welcome to ALMEEN ACADEMY, where excellence meets opportunity. Our commitment to academic excellence, character development, and holistic growth sets us apart.<br><br>
+                At Almeen Academy, we believe in nurturing not just academic brilliance but also the character and values that make our students outstanding citizens. Our dedicated faculty works tirelessly to create an environment where every student can discover and develop their unique potential.<br><br>
+                We focus on:<br>
+                • Academic Excellence<br>
+                • Character Development<br>
+                • Leadership Skills<br>
+                • Innovation and Creativity<br>
+                • Global Citizenship<br><br>
+                Join us in this journey of learning, growth, and success.
+              </div>
+              <div class="leader-social-row">
+                <a href="mailto:principal@email.com" class="leader-social--icon email" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/919999999999" class="leader-social--icon whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- Vice Principal Card -->
+          <div class="leadership-card">
+            <div class="leadership-img-wrapper">
+              <img class="leadership-img" src="Images_almeen/viceprincipalalmeen.jpg" alt="Mrs. [Vice Principal Name] - Vice Principal" loading="lazy" />
+            </div>
+            <div class="leadership-info">
+              <div class="leader-name">Mrs. [Vice Principal Name]</div>
+              <div class="leader-role">Vice Principal</div>
+              <div class="leader-message">
+                As Vice Principal of Almeen Academy, I am proud to support our mission of nurturing every student's potential. We strive to create a safe, inclusive, and inspiring environment where students can excel academically and personally.<br><br>
+                Our focus is on holistic development, discipline, and fostering a love for lifelong learning. Together with our dedicated staff, we are committed to guiding and supporting each child on their journey to success.<br><br>
+                Thank you for being a part of the Almeen Academy family.
+              </div>
+              <div class="leader-social-row">
+                <a href="mailto:viceprincipal@email.com" class="leader-social--icon email" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/919999999999" class="leader-social--icon whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Message Modal -->
-    <div class="message-modal" id="messageModal">
-      <button class="close-modal" onclick="closeMessage()" aria-label="Close modal">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="16" cy="16" r="16" fill="#fff"/>
-          <path d="M10 10L22 22" stroke="#e63946" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M22 10L10 22" stroke="#e63946" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </button>
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 id="modalTitle"></h2>
-          <div class="modal-subtitle">Leadership Message</div>
-        </div>
-        <div class="modal-body">
-          <p id="modalMessage"></p>
-        </div>
-      </div>
-    </div>
 
     <!-- Features Section -->
     <section class="features-section">
