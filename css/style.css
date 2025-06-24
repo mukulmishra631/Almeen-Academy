@@ -1356,6 +1356,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: background 0.2s;
+  z-index: 10;
 }
 
 .notice-modal-close:hover {
@@ -2869,7 +2870,95 @@ body {
 }
 /* ===== ACADEMICS PAGE SECTIONS ===== */
 
-
+/* === Academics Page ONLY Styles === */
+.academics-page {
+  padding: 48px 0 32px 0;
+  background: linear-gradient(120deg, #f7fafd 0%, #e3f0ff 100%);
+  min-height: 80vh;
+}
+.academics-page h1 {
+  text-align: center;
+  font-size: 2.6rem;
+  color: var(--primary-color);
+  font-weight: 900;
+  margin-bottom: 2.5rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(44,62,80,0.07);
+}
+.academics-page section {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(44,62,80,0.10);
+  margin: 2.2rem auto;
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  max-width: 700px;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  animation: fadeInUp 1s cubic-bezier(.4,2,.6,1);
+}
+.academics-page section:hover {
+  box-shadow: 0 16px 40px rgba(230,57,70,0.13), 0 4px 18px rgba(44,62,80,0.10);
+  transform: translateY(-6px) scale(1.02);
+}
+.academics-page section h2 {
+  font-size: 1.6rem;
+  color: #4169e1;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+  border-left: 5px solid #ffb600;
+  padding-left: 12px;
+}
+.academics-page ul {
+  padding-left: 1.3rem;
+  margin-top: 1rem;
+  font-size: 1.08rem;
+  color: #2c3e50;
+  line-height: 1.7;
+}
+.academics-page ul ul {
+  margin-top: 0.3rem;
+  padding-left: 1.5rem;
+  font-size: 1.01rem;
+  color: #444;
+}
+.academics-page li {
+  margin: 0.4rem 0;
+  position: relative;
+  padding-left: 0.7em;
+}
+.academics-page li::before {
+  color: #e63946;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.academics-page section a {
+  color: #4169e1;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.academics-page section a:hover {
+  color: #e63946;
+}
+@media (max-width: 800px) {
+  .academics-page section {
+    max-width: 98vw;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .academics-page h1 {
+    font-size: 1.7rem;
+  }
+  .academics-page section h2 {
+    font-size: 1.15rem;
+    padding-left: 8px;
+  }
+  .academics-page ul {
+    font-size: 0.98rem;
+  }
+}
 /* ===== ADMISSION FORM PAGE SECTIONS ===== */
 .form-section {
   padding: 60px 20px;
@@ -3363,21 +3452,23 @@ h1.gallery-title,
   transition: all 0.3s ease;
   color: white;
   text-decoration: none;
+  font-size: 1.3rem;
 }
 
 .social-icons a:hover {
-  background: white;
-  transform: translateY(-3px);
+  background: #fff;
+  transform: translateY(-3px) scale(1.08);
 }
 
 .social-icons a:hover i {
-  color: #ff0000;
+  color: #ff0000 !important;
+  transition: color 0.3s;
 }
 
 .social-icons i {
   font-size: 22px;
   color: white;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .copyright {
@@ -3402,4 +3493,14 @@ h1.gallery-title,
   .social-icons {
     justify-content: center;
   }
+}
+/* Fix for about page footer social icon hover */
+.footer .social-icons a:hover i,
+.footer .social-icons a:focus i {
+  color: #ff0000 !important;
+  transition: color 0.3s;
+}
+.footer .social-icons i {
+  color:#fff;
+  transition: color 0.3s;
 }

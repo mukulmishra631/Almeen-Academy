@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us - ALMEEN ACADEMY</title>
     <meta name="description" content="Learn about ALMEEN ACADEMY's history, mission, values, and the dedicated team behind our success in providing quality education." />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
     <link rel="stylesheet" href="css/style.css" />
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="Images_almeen/favicon-32x32.png" />
@@ -17,6 +18,7 @@
     <!-- Preload critical assets -->
     <link rel="preload" href="Images_almeen/about-hero.jpg" as="image" />
     <link rel="preload" href="Images_almeen/logoalmeen.jfif" as="image" />
+
   </head>
   <body>
     <!-- Header -->
@@ -362,10 +364,16 @@
         <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
       </svg>
     </button>
-
+    <style>
+      /* Remove hover color effect from footer social icons on about.html only */
+      footer.footer .social-icons a:hover > i,
+      footer.footer .social-icons a:focus > i {
+        color: #fff !important;
+        transition: none !important;
+      }
+      </style>
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js" defer></script>
-    <script src="js/commons.js" defer></script>
+
     <script src="js/script.js" defer></script>
   </body>
 </html>

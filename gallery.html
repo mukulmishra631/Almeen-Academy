@@ -65,48 +65,42 @@
       <h1>School Events Gallery</h1>
 
       <div class="gallery-container">
+        <!-- Lightbox (moved outside gallery-grid for clarity) -->
+        <div id="lightbox" class="lightbox" style="display:none;">
+          <div class="lightbox-overlay" id="lightboxOverlay" style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:1;"></div>
+          <span class="close-btn" id="lightboxClose" style="z-index:2;position:absolute;top:20px;right:30px;">&times;</span>
+          <img id="lightbox-img" src="" alt="Enlarged image" style="z-index:2;position:relative;max-width:90%;max-height:90vh;object-fit:contain;display:block;margin:auto;box-shadow:0 0 20px rgba(0,0,0,0.3);border-radius:8px;" />
+          <div id="lightbox-instructions" style="position:absolute;bottom:24px;left:0;width:100%;text-align:center;color:#fff;font-size:1.08rem;letter-spacing:0.5px;text-shadow:0 2px 8px #000;background:rgba(0,0,0,0.18);padding:8px 0;z-index:10;pointer-events:none;">
+            Use arrow keys to navigate or swipe left/right on mobile.
+          </div>
+        </div>
+
         <!-- Photo Gallery -->
         <section class="gallery-photos">
           <h2>Photo Gallery</h2>
           <div class="gallery-grid">
-            <div class="grid-item" onclick="openLightbox(this)">
-              <img src="Images_almeen/campus_img.jpg" alt="Event 1" />
-            </div>
-            <div class="grid-item" onclick="openLightbox(this)">
-              <img src="Images_almeen/image2.jfif" alt="Event 2" />
-            </div>
-            <div class="grid-item" onclick="openLightbox(this)">
-              <img src="Images_almeen/image3.jfif" alt="Event 3" />
-            </div>
-            <div class="grid-item" onclick="openLightbox(this)">
-              <img src="Images_almeen/image4.avif" alt="Event 4" />
-            </div>
-            <div class="grid-item" onclick="openLightbox(this)">
-              <img src="Images_almeen/upd2.jpeg" alt="Event 5" />
-            </div>
-            <div class="grid-item" onclick="openLightbox(this)">
-              <img src="Images_almeen/upd3.jpeg" alt="Event 6" />
-            </div>
-            <div class="grid-item" onclick="openLightbox(this)">
-              <img src="Images_almeen/upd4.jpeg" alt="Event 7" />
-            </div>
-            <div class="grid-item" onclick="openLightbox(this)">
-              <img src="Images_almeen/upd5.jpeg" alt="Event 8" />
-            </div>
-            <div class="grid-item" onclick="openLightbox(this)">
-              <img src="Images_almeen/upd6.jpeg" alt="Event 9" />
-            </div>
-            <div class="grid-item" onclick="openLightbox(this)">
-              <img src="Images_almeen/upd1.jpeg" alt="Event 10" />
-            </div>
+            <div class="grid-item"><img src="Images_almeen/directorAlmeen.jpeg" alt="Director's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/principalalmeen.jpeg" alt="Principal's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/viceprincipalalmeen.jpg" alt="Vice Principal's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/image2.jfif" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/image3.jfif" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/image4.avif" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/upd1.jpeg" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/upd2.jpeg" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/upd3.jpeg" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/upd4.jpeg" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/upd5.jpeg" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/upd6.jpeg" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/frontalmeen.jpg" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/upd7.jpg" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/upd8.jpg" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/upd9.jpg" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/upd10.jpg" alt="Event/someone's image" /></div>
+            <div class="grid-item"><img src="Images_almeen/upd11.jpg" alt="Event/someone's image" /></div>
+
+         
           </div>
         </section>
-
-        <!-- Lightbox -->
-        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-          <span class="close-btn">&times;</span>
-          <img id="lightbox-img" src="" alt="Enlarged image" />
-        </div>
 
         <!-- Video Gallery -->
         <section class="gallery-videos">
@@ -185,7 +179,90 @@
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="js/commons.js"></script>
+
     <script src="js/script.js"></script>
+    <script>
+    // Gallery Lightbox Logic (self-contained for gallery.html only)
+    document.addEventListener('DOMContentLoaded', function() {
+      const gridItems = document.querySelectorAll('.gallery-grid .grid-item img');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxOverlay = document.getElementById('lightboxOverlay');
+      const lightboxClose = document.getElementById('lightboxClose');
+      let currentIndex = 0;
+      let images = Array.from(gridItems);
+
+      function openLightbox(index) {
+        currentIndex = index;
+        lightboxImg.src = images[index].src;
+        lightboxImg.alt = images[index].alt;
+        lightbox.style.display = 'flex';
+        setTimeout(() => lightbox.classList.add('active'), 10);
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        setTimeout(() => {
+          lightbox.style.display = 'none';
+          document.body.style.overflow = '';
+        }, 200);
+      }
+
+      images.forEach((img, idx) => {
+        img.addEventListener('click', function(e) {
+          e.stopPropagation();
+          openLightbox(idx);
+        });
+      });
+
+      // Clicking overlay closes lightbox
+      lightboxOverlay.addEventListener('click', closeLightbox);
+      lightboxClose.addEventListener('click', closeLightbox);
+
+      // Prevent closing when clicking the image
+      lightboxImg.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+
+      // Keyboard navigation (arrow keys)
+      document.addEventListener('keydown', function(event) {
+        if (!lightbox.classList.contains('active')) return;
+        if (event.key === 'Escape') closeLightbox();
+        if (event.key === 'ArrowLeft') {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          lightboxImg.src = images[currentIndex].src;
+          lightboxImg.alt = images[currentIndex].alt;
+        }
+        if (event.key === 'ArrowRight') {
+          currentIndex = (currentIndex + 1) % images.length;
+          lightboxImg.src = images[currentIndex].src;
+          lightboxImg.alt = images[currentIndex].alt;
+        }
+      });
+
+      // Touch swipe for mobile
+      let touchStartX = 0;
+      let touchEndX = 0;
+      lightboxImg.addEventListener('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+      });
+      lightboxImg.addEventListener('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        const swipeDistance = touchEndX - touchStartX;
+        if (Math.abs(swipeDistance) > 50) {
+          if (swipeDistance > 0) {
+            // Previous
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+          } else {
+            // Next
+            currentIndex = (currentIndex + 1) % images.length;
+          }
+          lightboxImg.src = images[currentIndex].src;
+          lightboxImg.alt = images[currentIndex].alt;
+        }
+      });
+    });
+    </script>
   </body>
 </html>

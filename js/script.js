@@ -349,6 +349,17 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.style.overflow = 'hidden';
   };
 
+  // Only close when clicking overlay or close button, not the image
+  function lightboxClickHandler(e) {
+    const lightboxImg = document.getElementById('lightbox-img');
+    if (e.target.classList.contains('close-btn')) {
+      window.closeLightbox();
+    } else if (e.target === e.currentTarget) {
+      window.closeLightbox();
+    }
+    // Do nothing if clicking the image
+  }
+
   window.closeLightbox = function() {
     const lightbox = document.getElementById('lightbox');
     lightbox.classList.remove('active');
@@ -388,6 +399,8 @@ document.addEventListener('DOMContentLoaded', function() {
         touchEndX = e.changedTouches[0].screenX;
         handleSwipe();
       });
+      // Fix: Only close when clicking overlay or close button
+      lightbox.addEventListener('click', lightboxClickHandler);
     }
     // Keyboard navigation
     document.addEventListener('keydown', function(event) {
