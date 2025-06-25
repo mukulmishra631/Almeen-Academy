@@ -53,9 +53,7 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Enable Netlify's image optimization
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+
 
 [build.environment]
   NODE_VERSION = "16"
