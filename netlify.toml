@@ -1,27 +1,33 @@
+# Netlify configuration for Almeen Academy
+# This file contains settings for building and deploying the site on Netlify.
+
 [build]
+  # This tells Netlify where the final website files are located.
+  # For this project, they are in the root directory.
   publish = "/"
 
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
-
+# The 'processing' settings tell Netlify to automatically optimize
+# files during the build process. This improves performance without
+# needing any complex plugins.
 [build.processing]
   skip_processing = false
 
-[build.processing.css]
-  bundle = true
-  minify = true
+  [build.processing.css]
+    bundle = true
+    minify = true
 
-[build.processing.js]
-  bundle = true
-  minify = true
+  [build.processing.js]
+    bundle = true
+    minify = true
 
-[build.processing.html]
-  pretty_urls = true
+  [build.processing.html]
+    pretty_urls = true
 
-[build.processing.images]
-  compress = true
-  quality = 85
-  strip_metadata = true
+  # This will automatically compress all images in the project.
+  # 'quality = 85' provides a good balance between file size and visual quality.
+  [build.processing.images]
+    compress = true
+    quality = 85
 
 [[headers]]
   for = "/*"
