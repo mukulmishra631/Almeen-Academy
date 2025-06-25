@@ -1,0 +1,66 @@
+[build]
+  publish = "/"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true
+  quality = 85
+  strip_metadata = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/Images_almeen/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Enable Netlify's image optimization
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NODE_VERSION = "16"
+
+# Enable Brotli compression
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Encoding = "br"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 

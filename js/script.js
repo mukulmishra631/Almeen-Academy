@@ -221,8 +221,6 @@ if (statsSection) {
   statsObserver.observe(statsSection);
 }
 
-
-
 // Notice Card Modal
 (function() {
   const noticeModal = document.getElementById('noticeModal');
@@ -253,10 +251,12 @@ if (statsSection) {
 })();
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Trigger hero section animations if needed (for browsers that don't auto-play CSS animations)
-  document.querySelectorAll('.hero-title, .hero-subtitle, .hero-buttons').forEach(el => {
-    el.classList.add('animated');
-  });
+  var hero = document.querySelector('.hero-center-content');
+  if (hero) {
+    hero.style.opacity = '1';
+    hero.style.transform = 'none';
+    hero.style.transition = 'opacity 2s cubic-bezier(0.23, 1, 0.32, 1) 0.4s, transform 2s cubic-bezier(0.23, 1, 0.32, 1) 0.4s';
+  }
 });
 
 // ====== LIGHTBOX GALLERY (for gallery.html) ======

@@ -1,0 +1,12 @@
+# Optimized images (can be regenerated)
+Images_almeen/optimized/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo 
