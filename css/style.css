@@ -644,7 +644,54 @@ body {
   /* WhatsApp Green */
 }
 
-/* ===== Responsive Styles for Leadership Section ===== */
+/* Read More Button Styles */
+.read-more-btn {
+  background: linear-gradient(90deg, #e63946 0%, #ff6b6b 100%);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 12px;
+  box-shadow: 0 2px 8px rgba(230, 57, 70, 0.2);
+  outline: none;
+}
+
+.read-more-btn:hover {
+  background: linear-gradient(90deg, #ff6b6b 0%, #e63946 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3);
+}
+
+.read-more-btn:focus {
+  outline: 2px solid #e63946;
+  outline-offset: 2px;
+}
+
+/* Message Preview and Full Content Styles */
+.message-preview {
+  color: #666;
+  margin-bottom: 0;
+}
+
+.message-full {
+  color: #666;
+  margin-bottom: 0;
+}
+
+.message-full p {
+  margin-bottom: 1rem;
+}
+
+.message-full p:last-child {
+  margin-bottom: 0;
+}
+
+#more {display: none;}
+
 @media (max-width: 1024px) {
   .leadership-cards {
     grid-template-columns: 1fr 1fr;
