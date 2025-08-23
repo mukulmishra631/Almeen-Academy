@@ -658,6 +658,10 @@ body {
   margin-top: 12px;
   box-shadow: 0 2px 8px rgba(230, 57, 70, 0.2);
   outline: none;
+  width: auto;
+  min-width: 120px;
+  display: inline-block;
+  text-align: center;
 }
 
 .read-more-btn:hover {
@@ -669,6 +673,43 @@ body {
 .read-more-btn:focus {
   outline: 2px solid #e63946;
   outline-offset: 2px;
+}
+
+/* Mobile Read More Button Styles */
+@media (max-width: 768px) {
+  .read-more-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 16px;
+    border-radius: 25px;
+    min-width: 140px;
+    box-shadow: 0 3px 12px rgba(230, 57, 70, 0.25);
+    background: linear-gradient(90deg, #e63946 0%, #ff6b6b 100%);
+  }
+  
+  .read-more-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(230, 57, 70, 0.3);
+  }
+}
+
+@media (max-width: 480px) {
+  .read-more-btn {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 18px;
+    border-radius: 28px;
+    min-width: 160px;
+    box-shadow: 0 4px 16px rgba(230, 57, 70, 0.3);
+    background: linear-gradient(90deg, #e63946 0%, #ff6b6b 100%);
+  }
+  
+  .read-more-btn:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 8px rgba(230, 57, 70, 0.4);
+  }
 }
 
 /* Message Preview and Full Content Styles */
