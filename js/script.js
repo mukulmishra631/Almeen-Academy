@@ -7,6 +7,273 @@ const removeClass = (element, className) => element.classList.remove(className);
 const hasClass = (element, className) => element.classList.contains(className);
 const toggleClass = (element, className) => element.classList.toggle(className);
 
+// Updates Section - Event Gallery Functionality
+const eventGalleries = {
+  diwali: {
+    title: "Diwali Celebration 2024",
+    description: "Photos and videos from our annual Diwali celebration",
+    items: [
+      {
+        type: "image",
+        src: "Images_almeen/updates/d (1).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image", 
+        src: "Images_almeen/updates/d (2).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/d (3).jpeg", 
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/d (4).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/d (5).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/d (6).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/d (7).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/d (8).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/d (9).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/d (10).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/d (11).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/d (12).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/d (13).jpeg",
+        title: "",
+        caption: ""
+      }
+      
+    ]
+  },
+  sports: {
+    title: "Sports Volleyball Team 2024", 
+    description: "Photos and videos from our volleyball team activities",
+    items: [
+      {
+        type: "image",
+        src: "Images_almeen/updates/s1 (2).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/s1 (3).jpeg", 
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/s1 (4).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image", 
+        src: "Images_almeen/updates/s1 (5).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image", 
+        src: "Images_almeen/updates/s1 (1).jpeg",
+        title: "",
+        caption: ""
+      }
+    ]
+  }
+};
+
+let currentGallery = null;
+let currentItemIndex = 0;
+
+function openEventGallery(eventId) {
+  currentGallery = eventGalleries[eventId];
+  if (!currentGallery) return;
+  
+  currentItemIndex = 0;
+  
+  // Update modal header
+  document.getElementById('galleryEventTitle').textContent = currentGallery.title;
+  document.getElementById('galleryEventDescription').textContent = currentGallery.description;
+  
+  // Load gallery items
+  loadGalleryItems();
+  
+  // Show modal
+  document.getElementById('eventGalleryModal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeEventGallery() {
+  document.getElementById('eventGalleryModal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+function loadGalleryItems() {
+  const container = document.getElementById('galleryContainer');
+  container.innerHTML = '';
+  
+  // Create gallery grid
+  const grid = document.createElement('div');
+  grid.className = 'gallery-grid';
+  
+  currentGallery.items.forEach((item, index) => {
+    const galleryItem = document.createElement('div');
+    galleryItem.className = 'gallery-item';
+    galleryItem.onclick = () => updatesOpenLightbox(index);
+    
+    if (item.type === 'image') {
+      galleryItem.innerHTML = `
+        <img src="${item.src}" alt="${item.title}" loading="lazy">
+        <div class="gallery-item-caption">
+          <h4>${item.title}</h4>
+          <p>${item.caption}</p>
+        </div>
+      `;
+    } else if (item.type === 'video') {
+      galleryItem.innerHTML = `
+        <video controls>
+          <source src="${item.src}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="gallery-item-caption">
+          <h4>${item.title}</h4>
+          <p>${item.caption}</p>
+        </div>
+      `;
+    }
+    
+    grid.appendChild(galleryItem);
+  });
+  
+  container.appendChild(grid);
+  updateNavigation();
+}
+
+function updatesOpenLightbox(index) {
+  currentItemIndex = index;
+  renderLightbox();
+  const overlay = document.getElementById('lightboxOverlay');
+  overlay.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function updatesCloseLightbox() {
+  const overlay = document.getElementById('lightboxOverlay');
+  overlay.style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+// Prev/Next removed per requirement
+
+function renderLightbox() {
+  if (!currentGallery) return;
+  const item = currentGallery.items[currentItemIndex];
+  const mediaContainer = document.getElementById('lightboxMedia');
+  const caption = document.getElementById('lightboxCaption');
+  mediaContainer.innerHTML = '';
+  
+  if (item.type === 'image') {
+    const img = document.createElement('img');
+    img.src = item.src;
+    img.alt = item.title || '';
+    mediaContainer.appendChild(img);
+  } else if (item.type === 'video') {
+    const video = document.createElement('video');
+    video.controls = true;
+    const source = document.createElement('source');
+    source.src = item.src;
+    source.type = 'video/mp4';
+    video.appendChild(source);
+    mediaContainer.appendChild(video);
+  }
+  
+  caption.textContent = '';
+  updateNavigation();
+}
+
+function updateNavigation() {
+  const counter = document.getElementById('galleryCounter');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  
+  if (currentGallery) {
+    if (counter) counter.textContent = `${currentItemIndex + 1} / ${currentGallery.items.length}`;
+    if (prevBtn) prevBtn.disabled = false;
+    if (nextBtn) nextBtn.disabled = false;
+  }
+}
+
+// Close modal when clicking outside
+document.addEventListener('click', (e) => {
+  const modal = document.getElementById('eventGalleryModal');
+  if (e.target === modal) {
+    closeEventGallery();
+  }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    updatesCloseLightbox();
+    closeEventGallery();
+  }
+});
+
+// Close lightbox when clicking outside media
+document.getElementById('lightboxOverlay')?.addEventListener('click', (e) => {
+  if (e.target.id === 'lightboxOverlay') updatesCloseLightbox();
+});
+
 const isInViewport = (element) => {
   const rect = element.getBoundingClientRect();
   return (
