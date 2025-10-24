@@ -91,7 +91,6 @@ const eventGalleries = {
         title: "",
         caption: ""
       }
-      
     ]
   },
   sports: {
@@ -125,6 +124,12 @@ const eventGalleries = {
       {
         type: "image", 
         src: "Images_almeen/updates/s1 (1).jpeg",
+        title: "",
+        caption: ""
+      },
+      {
+        type: "image",
+        src: "Images_almeen/updates/d (13).jpeg",
         title: "",
         caption: ""
       }
