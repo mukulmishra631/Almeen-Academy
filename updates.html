@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>School Events & Updates</title>
+    <link rel="stylesheet" href="css/updates.css" />
+    <!-- Add in <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+  .hero-header h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #e2da36;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    animation: fadeInScale 2s ease-out forwards;
+   
+  }
+
+  .hero-header p {
+    font-family: 'Great Vibes', sans-serif;
+    font-size: 3rem;
+    color: #ffffff;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 2s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  .underline {
+    width: 0;
+    height: 4px;
+    background: #ffffff;
+    margin: 10px auto 20px auto;
+    animation: expand 1.5s forwards;
+    animation-delay: 1s;
+  }
+
+  @keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(0.7); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes expand {
+    0% { width: 0; }
+    100% { width: 60%; }
+  }
+</style>
+
+  </head>
+  <body>
+   
+
+    <header class="hero-header">
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1 class="animate-title">School Events & Updates</h1>
+    <div class="underline"></div>
+    <p class="animate-subtitle">Catch all the latest happenings and celebrations!</p>
+  </div>
+</header>
+
+
+    <main>
+      <!-- Event Category 1 -->
+      <section class="event-category">
+        <h2 class="fancy-underline">Diwali Celebration 2025</h2>
+        <div class="gallery">
+          <img src="Images_almeen/updates/d (1).jpeg" alt="" />
+          <img src="Images_almeen/updates/d (2).jpeg" alt="" />
+          <img src="Images_almeen/updates/d (3).jpeg" alt="" />
+          <img src="Images_almeen/updates/d (4).jpeg" alt="" />
+          <img src="Images_almeen/updates/d (5).jpeg" alt="" />
+          <img src="Images_almeen/updates/d (6).jpeg" alt="" />
+          <img src="Images_almeen/updates/d (7).jpeg" alt="" />
+          <img src="Images_almeen/updates/d (8).jpeg" alt="" />
+          <img src="Images_almeen/updates/d (9).jpeg" alt="" />
+          <img src="Images_almeen/updates/d (10).jpeg" alt="" />
+          <img src="Images_almeen/updates/d (11).jpeg" alt="" />
+          <img src="Images_almeen/updates/d (12).jpeg" alt="" />
+          <img src="Images_almeen/updates/d (13).jpeg" alt="" />
+        </div>
+      </section>
+
+      <!-- Event Category 2 -->
+      <section class="event-category">
+        <h2 class="fancy-underline">Sports Day</h2>
+        <div class="gallery">
+          <img src="Images_almeen/updates/s1 (1).jpeg" alt="" />
+          <img src="Images_almeen/updates/s1 (2).jpeg" alt="" />
+          <img src="Images_almeen/updates/s1 (3).jpeg" alt="" />
+          <img src="Images_almeen/updates/s1 (4).jpeg" alt="" />
+          <img src="Images_almeen/updates/s1 (5).jpeg" alt="" />
+          
+        </div>
+      </section>
+
+      <!-- Event Category 3 -->
+      <!-- <section class="event-category">
+        <h2>Science Exhibition</h2>
+        <div class="gallery">
+          <img src="images/science1.jpg" alt="Science Exhibition 1" />
+          <img src="images/science2.jpg" alt="Science Exhibition 2" />
+          <img src="images/science3.jpg" alt="Science Exhibition 3" />
+        </div>
+      </section>
+    </main> -->
+
+    <!-- Fullscreen Image Modal -->
+    <div class="modal" id="imageModal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg" />
+      <div id="caption"></div>
+    </div>
+    <div class="back-home-container">
+  <a href="index.html" class="back-home-btn">Back to Homepage</a>
+</div>
+
+
+    <script src="js/updates.js"></script>
+  </body>
+</html>
