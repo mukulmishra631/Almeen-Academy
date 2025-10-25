@@ -110,12 +110,17 @@ body {
     border-bottom-right-radius: 30px;
   }
 
+  /* Mobile-specific font & color */
   .hero-content h1 {
-    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #ffeb99; /* lighter yellow for contrast */
   }
 
   .hero-content p {
-    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    color: #ffffffcc; /* semi-transparent white */
   }
 }
 
